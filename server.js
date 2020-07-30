@@ -1,6 +1,6 @@
 var http = require('http');
 
-const PORT = process.env.PORT || 8123;
+const PORT = 8123;
 
 http.createServer(function (req, res) {
   const message = "You are awesome dude!";
