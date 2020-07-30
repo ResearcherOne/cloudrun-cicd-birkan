@@ -4,4 +4,4 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/skilled-torus-284914/$_APP/cloudrun-cicd-test:$COMMIT_SHA']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'you-are-awesome-$_APP', '--region=europe-west4', '--platform=managed', '--port=8123', '--allow-unauthenticated', '--image=gcr.io/skilled-torus-284914/$_APP/cloudrun-cicd-test:$COMMIT_SHA']
+  args: ['beta', 'run', 'deploy', 'you-are-awesome-$_APP', '--region=$_REGION', '--platform=managed', '--port=8123', '--allow-unauthenticated', '--image=gcr.io/skilled-torus-284914/$_APP/cloudrun-cicd-test:$COMMIT_SHA']
